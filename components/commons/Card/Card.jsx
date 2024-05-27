@@ -23,11 +23,11 @@ const Card = ({ title, subtitle, description, image, type, path }) => (
             <span style={localStyle}>{paragraph}</span>
           </Paragraph>
         ))}
-        <button className={style.button}>
-          <a href={path} target="_blank" rel="noreferrer">
+        <a href={path} target="_blank" rel="noreferrer">
+          <button className={style.button}>
             Clique aqui e Confira!
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
 
       <div className={style.image}>
