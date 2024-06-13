@@ -1,0 +1,42 @@
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    width: 320px;
+    padding: 40px 16px;
+    border-radius: 16px;
+}
+
+.box p {
+    text-align: center;
+    font-weight: semibold;
+    font-size: 16px;
+    color: black;
+}
+
+.box button {
+    padding: 12px 24px;
+    margin-top: 16px;
+    background-color: #95C6FF;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.box button:hover {
+    background-color: #99BAE0;
+}
