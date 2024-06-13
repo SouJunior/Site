@@ -1,7 +1,7 @@
 import axios from "axios";
 import { areas } from "../utils/areas";
 
-const http = axios.create({
+export const http = axios.create({
   baseURL: "https://site-backend-67zq.onrender.com",
 });
 
