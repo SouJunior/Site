@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,6 +17,17 @@ export const OccupationSection = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.params.navigation.prevEl = navigationPrevRef.current;
+      swiperRef.current.swiper.params.navigation.nextEl = navigationNextRef.current;
+      swiperRef.current.swiper.navigation.init();
+      swiperRef.current.swiper.navigation.update();
+    }
+  }, []);
+
   return (
     <>
       <section className={styles.OccupationSection} id="areas-de-atuacao">
@@ -30,6 +41,7 @@ export const OccupationSection = () => {
 
           <div className={styles.areasContainer}>
             <Swiper
+              ref={swiperRef}
               slidesPerView={8}
               freeMode={true}
               loop={true}
